@@ -182,78 +182,44 @@ public class Main {
          System.out.println( evaluaNota(promedioNotas));
 
      }
-     public static void opcionGraficoAsteriscos(){
+     public static void opcionGraficoAsteriscos() {
 
-       String caracterAsterisco = "*";
+         String caracterAsterisco = "*";
 
-        for (int i = 0; i < 20; i++) {
+         for (int i = 0; i < 7; i++) {
+             System.out.println(caracterAsterisco);
+             caracterAsterisco = caracterAsterisco + "*";
+         }
 
-            if (i<7) {
-                //  System.out.println("foo");
-                //  System.out.println(i+1);
-                System.out.println(caracterAsterisco);
-                caracterAsterisco = caracterAsterisco + "*";
-            }
+         System.out.println("////////////////////");
 
-            switch (i){
-                case 6:{
-                    System.out.println("*******");
-                    break;
-                }
-                case 7:{
-                    System.out.println("******");
-                    break;
-                }
-                case 8:{
-                    System.out.println("*****");
-                    break;
-                }
-                case 9:{
-                    System.out.println("****");
-                    break;
-                }
-                case 10:{
-                    System.out.println("***");
-                    break;
-                }
-                case 11:{
-                    System.out.println("**");
-                    break;
-                }
-                case 12:{
-                    System.out.println("*");
-                    break;
-                }
-                case 13:{
-                    System.out.println("      *");
-                      break;
-                }
-                case 14:{
-                        System.out.println("     **");
-                        break;
-                }
-                case 15:{
-                        System.out.println("    ***");
-                        break;
-                }
-                case 16:{
-                        System.out.println("   ****");
-                        break;
-                }
-                case 17:{
-                        System.out.println("  *****");
-                        break;
-                }
-                case 18:{
-                        System.out.println(" ******");
-                        break;
-                }
-                case  19:{
-                        System.out.println("*******");
-                        break;
-                }
-            }
+         for (int j = 0; j < 7; j++) {
+             caracterAsterisco = "";
+             int maxChars = 7 - j;
 
-        }
-     }
+             for (int k = 0; k < maxChars; k++) {
+                 caracterAsterisco = caracterAsterisco + "*";
+             }
+             System.out.println(caracterAsterisco);
+         }
+         System.out.println("////////////////////");
+         ;
+
+
+         for (int j = 1; j < 8; j++) {
+             int maxChars= 7 - j;
+             caracterAsterisco = "";
+
+             for (int i = 0; i < maxChars; i++) {
+               caracterAsterisco=caracterAsterisco+" ";
+             }
+
+             for (int i = 0; i < j ; i++) {
+                caracterAsterisco=caracterAsterisco+"*";
+             }
+             System.out.println(caracterAsterisco);
+
+         }
+
+    }
 }
